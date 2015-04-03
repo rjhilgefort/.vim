@@ -1,6 +1,7 @@
 .vim/.netrwhist
 .vim/swaps/*
 .vim/bundle/*
+.vim/bundle/
 .vim/sessions/*
 !.vim/bundle/neobundle.vim
 .vim/colors/base16*
