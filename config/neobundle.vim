@@ -114,6 +114,7 @@
 		NeoBundle 'SearchComplete'
 		NeoBundle 'xolox/vim-misc'
 		NeoBundle 'xolox/vim-session'
+		NeoBundle 'farseer90718/vim-taskwarrior'
 
  call neobundle#end()
 
