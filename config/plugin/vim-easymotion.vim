@@ -26,7 +26,7 @@ nmap <Leader><Leader> <Plug>(easymotion-prefix)
 nmap <Leader><Leader><Leader> <Plug>(easymotion-repeat)
 
 " Common, fast access to easymotion
-nmap s <Plug>(easymotion-s)
+nmap f <Plug>(easymotion-s)
 nmap t <Plug>(easymotion-t)
 
 " Replace Vim default search
