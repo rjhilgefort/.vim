@@ -33,6 +33,7 @@
 	""""""""""
 		NeoBundle 'tpope/vim-surround'
 		NeoBundle 'pangloss/vim-javascript'
+		NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 		" NeoBundle 'tpope/vim-markdown'
 		NeoBundle 'groenewege/vim-less'
 		NeoBundle 'othree/html5.vim'
