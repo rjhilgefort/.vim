@@ -43,6 +43,7 @@
 		NeoBundle 'Chiel92/vim-autoformat'
 		" NeoBundle 'suan/vim-instant-markdown'
 		NeoBundle 'leafo/moonscript-vim'
+		NeoBundle 'tmux-plugins/vim-tmux'
 
 	" Completion
 	""""""""""""
@@ -116,6 +117,7 @@
 		NeoBundle 'xolox/vim-misc'
 		NeoBundle 'xolox/vim-session'
 		NeoBundle 'farseer90718/vim-taskwarrior'
+		NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 
  call neobundle#end()
 
