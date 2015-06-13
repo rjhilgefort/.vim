@@ -6,7 +6,7 @@
 let mapleader = "\<Space>"
 
 " <Esc> key alternative
-" imap jk <Esc>
+imap jk <Esc>
 
 " Setup mapping
 noremap <Leader>r :ReloadConfig<CR>
