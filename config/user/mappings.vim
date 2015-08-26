@@ -13,6 +13,8 @@ noremap <Leader>r :ReloadConfig<CR>
 
 " Easier saving, and quiting
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>f :w<CR>
+nnoremap <Leader>fs :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>wa :wa<CR>
