@@ -75,3 +75,12 @@ nmap <Leader>ea :checktime<CR>
 " Select all, copy all
 nmap <Leader>va ggVG
 nmap <Leader>ya ggVGy
+
+" Spacemacs conventions/familiarity
+"""""""""""""""""""""""""""""""""""
+" Spacing
+nmap <Leader>ij ]<Leader>
+nmap <Leader>ik [<Leader>
+" Unite
+nmap <Leader>/ <Leader>pg
+nmap <Leader>ff <Leader>pF

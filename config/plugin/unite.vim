@@ -79,12 +79,12 @@ call unite#custom#profile('mapping',  'context', {})
 function! s:uniteFeatureBind(feature, bind, ...)
 	let l:featureCommand = (a:0 >= 1) ? a:1 : a:feature
 
-	execute 'nnoremap <Leader>u' . a:bind . ' :Unite -buffer-name=' . a:feature . ' -toggle ' . l:featureCommand . '<CR>'
-	execute 'nnoremap <Leader>u' . a:bind . 'r :UniteResume -buffer-name=' . a:feature . ' ' . a:feature . '<CR>'
+	execute 'nnoremap <Leader>p' . a:bind . ' :Unite -buffer-name=' . a:feature . ' -toggle ' . l:featureCommand . '<CR>'
+	execute 'nnoremap <Leader>p' . a:bind . 'r :UniteResume -buffer-name=' . a:feature . ' ' . a:feature . '<CR>'
 endfunction
 
-call s:uniteFeatureBind('files',    'p', 'file_rec/async:!')
-call s:uniteFeatureBind('flat',     'f', 'file directory directory/new file/new')
+call s:uniteFeatureBind('files',    'f', 'file_rec/async:!')
+call s:uniteFeatureBind('flat',     'F', 'file directory directory/new file/new')
 call s:uniteFeatureBind('file_mru', 'r')
 call s:uniteFeatureBind('buffer',   'b')
 call s:uniteFeatureBind('grep',     'g', 'grep:.')
@@ -96,8 +96,8 @@ call s:uniteFeatureBind('command',  ';', 'history/command')
 call s:uniteFeatureBind('mapping',  'm')
 
 " Resume previous action buffer
-nmap <Leader>uu :UniteResume -buffer-name=resume -toggle<CR>
+nmap <Leader>pp :UniteResume -buffer-name=resume -toggle<CR>
 
 " Shortcuts
-nmap <C-p> <Leader>up
+nmap <C-p> <Leader>pf
 
