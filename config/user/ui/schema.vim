@@ -9,5 +9,5 @@ set fillchars+=stl:\ ,stlnc:\
 " set term=screen-256color
 set t_Co=256
 set background=dark
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-eighties
+" let base16colorspace=256  " Access colors present in 256 colorspace
+" colorscheme base16-eighties
