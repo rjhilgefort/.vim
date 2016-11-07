@@ -3,31 +3,31 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Note: Skip initialization for vim-tiny or vim-small.
- if !1 | finish | endif
+if !1 | finish | endif
 
- if has('vim_starting')
-   set nocompatible " Be iMproved
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
+if has('vim_starting')
+	set nocompatible " Be iMproved
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
- call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
- " Plugins
- " REF: http://vimawesome.com
- """"""""""""""""""""""""""""
+" Plugins
+" REF: http://vimawesome.com
+""""""""""""""""""""""""""""
 
 	" Let NeoBundle manage NeoBundle
 	NeoBundleFetch 'Shougo/neobundle.vim'
 
 	" Install vimproc.vim
 	NeoBundle 'Shougo/vimproc.vim', {
-	    \ 'build' : {
-	    \     'windows' : 'make -f make_mingw32.mak',
-	    \     'cygwin' : 'make -f make_cygwin.mak',
-	    \     'mac' : 'make -f make_mac.mak',
-	    \     'unix' : 'make -f make_unix.mak',
-	    \    },
-	    \ }
+			\ 'build' : {
+			\     'windows' : 'make -f make_mingw32.mak',
+			\     'cygwin' : 'make -f make_cygwin.mak',
+			\     'mac' : 'make -f make_mac.mak',
+			\     'unix' : 'make -f make_unix.mak',
+			\    },
+			\ }
 
 	" Language
 	""""""""""
@@ -51,7 +51,8 @@
 		" NeoBundle 'Shougo/neocomplcache.vim'
 		NeoBundle 'mustache/vim-mustache-handlebars'
 		NeoBundle 'heavenshell/vim-jsdoc'
-		NeoBundle 'SirVer/ultisnips'
+
+		" NeoBundle 'SirVer/ultisnips'
 		NeoBundle 'honza/vim-snippets'
 
 	" Code Display
@@ -119,10 +120,9 @@
 		NeoBundle 'farseer90718/vim-taskwarrior'
 		NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 
- call neobundle#end()
+call neobundle#end()
 
- filetype plugin indent on
+filetype plugin indent on
 
- " Install any uninstalled bundles found on startup
- NeoBundleCheck
-
+" Install any uninstalled bundles found on startup
+NeoBundleCheck
