@@ -4,30 +4,30 @@
 
 " ack > grep
 if executable('ack')
-	let g:unite_source_grep_command = 'ack'
-	let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
-	let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_grep_command = 'ack'
+  let g:unite_source_grep_default_opts = '-i --no-heading --no-color -k -H'
+  let g:unite_source_grep_recursive_opt = ''
 endif
 
 " ag > ack
 if executable('ag')
-	let g:unite_source_grep_command = 'ag'
-	let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --hidden --ignore ".git"'
-	let g:unite_source_grep_recursive_opt = ''
-	let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden --ignore ".git" -g ""'
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --hidden --ignore ".git"'
+  let g:unite_source_grep_recursive_opt = ''
+  let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden --ignore ".git" -g ""'
 endif
 
 " Custom mappings for the unite buffer
 function! s:uniteSettings()
-	" Play nice with supertab
-	let b:SuperTabDisabled=1
+  " Play nice with supertab
+  let b:SuperTabDisabled=1
 
-	" Enable navigation with control-j and control-k in insert mode (like `ctrl-p`)
-	imap <buffer> <C-j> <Plug>(unite_select_next_line)
-	imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+  " Enable navigation with control-j and control-k in insert mode (like `ctrl-p`)
+  imap <buffer> <C-j> <Plug>(unite_select_next_line)
+  imap <buffer> <C-k> <Plug>(unite_select_previous_line)
 
-	" Toggle file preview
-	map <buffer> P <Plug>(unite_toggle_auto_preview)
+  " Toggle file preview
+  map <buffer> P <Plug>(unite_toggle_auto_preview)
 endfunction
 autocmd FileType unite call s:uniteSettings()
 
@@ -46,11 +46,11 @@ call unite#custom#source('buffer,file_mru,file_rec,file_rec/async', 'max_candida
 
 " Default settings
 call unite#custom#profile('default', 'context', {
-	\ 'split': 1,
-	\ 'winheight': 50,
-	\ 'start_insert': 1,
-	\ 'auto_preview': 0,
-	\ 'vertical_preview': 1,
+  \ 'split': 1,
+  \ 'winheight': 50,
+  \ 'start_insert': 1,
+  \ 'auto_preview': 0,
+  \ 'vertical_preview': 1,
 \ })
 
 " Feature Settings
@@ -77,10 +77,10 @@ call unite#custom#profile('mapping',  'context', {})
 " EX: nnoremap <Leader>ub :Unite -buffer-name=buffer -toggle buffer<CR>
 """
 function! s:uniteFeatureBind(feature, bind, ...)
-	let l:featureCommand = (a:0 >= 1) ? a:1 : a:feature
+  let l:featureCommand = (a:0 >= 1) ? a:1 : a:feature
 
-	execute 'nnoremap <Leader>p' . a:bind . ' :Unite -buffer-name=' . a:feature . ' -toggle ' . l:featureCommand . '<CR>'
-	execute 'nnoremap <Leader>p' . a:bind . 'r :UniteResume -buffer-name=' . a:feature . ' ' . a:feature . '<CR>'
+  execute 'nnoremap <Leader>p' . a:bind . ' :Unite -buffer-name=' . a:feature . ' -toggle ' . l:featureCommand . '<CR>'
+  execute 'nnoremap <Leader>p' . a:bind . 'r :UniteResume -buffer-name=' . a:feature . ' ' . a:feature . '<CR>'
 endfunction
 
 call s:uniteFeatureBind('files',    'f', 'file_rec/async:!')
@@ -100,4 +100,3 @@ nmap <Leader>pp :UniteResume -buffer-name=resume -toggle<CR>
 
 " Shortcuts
 nmap <C-p> <Leader>pf
-

@@ -20,12 +20,11 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 " Use ag for file list
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s' .
-	\ ' -l' .
-	\ ' --follow' .
-	\ ' --nocolor' .
-	\ ' --nogroup' .
-	\ ' --hidden' .
-	\ ' --ignore ".git"' .
-	\ ' -g ""'
+  \ ' -l' .
+  \ ' --follow' .
+  \ ' --nocolor' .
+  \ ' --nogroup' .
+  \ ' --hidden' .
+  \ ' --ignore ".git"' .
+  \ ' -g ""'
 endif
-

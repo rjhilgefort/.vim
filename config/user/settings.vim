@@ -33,7 +33,7 @@ set incsearch
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 if exists("&undodir")
-	set undodir=~/.vim/undo
+  set undodir=~/.vim/undo
 endif
 
 " Don’t create backups when editing files in certain directories
@@ -72,14 +72,13 @@ set scrolloff=3
 " Automatic commands
 if has("autocmd")
 
-	" Enable file type detection
-	filetype on
+  " Enable file type detection
+  filetype on
 
-	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	" autocmd BufNewFile,BufRead *.hbs setfiletype html syntax=html
+  " Treat .json files as .js
+  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  " autocmd BufNewFile,BufRead *.hbs setfiletype html syntax=html
 
 endif
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/node_modules/*,*/\.git/*
-
